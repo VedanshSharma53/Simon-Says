@@ -2,7 +2,7 @@
 let gameSeq = [];
 let userSeq = [];
 
-let btns = ["yellow","red","purple","green"];//to select color for random button choosing
+let btns = ["yellow","red","purple","green"];//to select color for choosing random button
 
 let started = false;
 let level = 0;
