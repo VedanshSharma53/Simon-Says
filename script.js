@@ -9,7 +9,8 @@ let level = 0;
 
 let h2 = document.querySelector("h2");//change the name of the level
 
-document.addEventListener("keypress", function() {
+let btnStrt = document.querySelector("button");
+btnStrt.addEventListener("click", function() {
     if(started == false){//To start game only once
         console.log("game is started");
         started = true;

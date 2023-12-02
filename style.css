@@ -38,3 +38,11 @@ body{
 .userFlash{
     background-color: black;
 }
+
+.start{
+    background-color: black;
+    -webkit-text-fill-color: wheat;
+    border-radius: 1rem;
+    margin: 1rem;
+    size: 20px;
+}
