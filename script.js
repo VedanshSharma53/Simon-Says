@@ -6,10 +6,12 @@ let btns = ["yellow","red","purple","green"];//to select color for choosing rand
 
 let started = false;
 let level = 0;
+let highScore = 0;
 
 let h2 = document.querySelector("h2");//change the name of the level
 
-let btnStrt = document.querySelector("button");
+let btnStrt = document.querySelector("button");//start button
+
 btnStrt.addEventListener("click", function() {
     if(started == false){//To start game only once
         console.log("game is started");
@@ -56,7 +58,7 @@ function btnPress (idx) {//button press
 
     userColor = btn.getAttribute("id");//get user input color using id(user level)
     userSeq.push(userColor);// add user color to sequence (user level)
-
+    audioclick();//call click audio function
     chkbutton(userSeq.length-1);//to check the previous color and then change
 }
 
@@ -74,6 +76,7 @@ function chkbutton(idx){//check the user input is correct or not
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white";//cahnge it to normal again after
         },150);
+        audiolose();
         reset();//to start game again
     }
 }
@@ -91,3 +94,24 @@ function reset() {
     userSeq = [];
     level = 0;
 }
+
+function HighScr(lvl) {
+    if (lvl > highScore) {
+      highScore = lvl;
+    }
+    return highScore;
+  }
+  function audio() {
+    let msc = new Audio("level.mp3");
+    msc.play();
+  }
+  
+  function audiolose() {
+    let msc = new Audio("buzzer.mp3");
+    msc.play();
+  }
+  
+  function audioclick() {
+    let msc = new Audio("click-button.mp3");
+    msc.play();
+  }

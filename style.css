@@ -40,9 +40,65 @@ body{
 }
 
 .start{
-    background-color: black;
-    -webkit-text-fill-color: wheat;
-    border-radius: 1rem;
-    margin: 1rem;
-    size: 20px;
+    height: 80px;
+    width: 250px;
+    margin-top: 30px;
+    border-radius: 40px 10px;
+    background-color: #c4d7b2;
+    font-size: 35px;
+    font-weight: 600;
+    box-shadow: 3px 3px grey;
+    font-family: 'Kanit', sans-serif;
 }
+
+.start:hover {
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  }
+
+@media (max-width: 480px) {
+  .head {
+    font-size: 35px;
+    margin: 5px;
+  }
+  h2 {
+    font-size: 10px;
+    margin: 5px;
+  }
+  .container {
+    height: 330px;
+    width: 330px;
+  }
+  .container > div {
+    height: 140px;
+    width: 140px;
+  }
+  .start {
+    height: 55px;
+    width: 170px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+    .head {
+      font-size: 45px;
+      margin: 0px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 10px;
+    }
+    .container {
+      height: 350px;
+      width: 350px;
+    }
+    .container > div {
+      height: 140px;
+      width: 140px;
+    }
+    .start {
+      height: 65px;
+      width: 180px;
+      margin-top: 15px;
+    }
+  }
