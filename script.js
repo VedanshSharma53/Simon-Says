@@ -38,7 +38,7 @@ function levelUp() {
 
     level++;//increses level
     h2.innerText = `level ${level}`;//change name of level diplayed
-
+    audio();//add start audio
     // random button choose
     let randIdx = Math.floor(Math.random() * 3);//generate random
     let randColor = btns[randIdx];//select random color
@@ -76,7 +76,7 @@ function chkbutton(idx){//check the user input is correct or not
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white";//cahnge it to normal again after
         },150);
-        audiolose();
+        audiowrong();
         reset();//to start game again
     }
 }
@@ -106,7 +106,7 @@ function HighScr(lvl) {
     msc.play();
   }
   
-  function audiolose() {
+  function audiowrong() {
     let msc = new Audio("buzzer.mp3");
     msc.play();
   }
