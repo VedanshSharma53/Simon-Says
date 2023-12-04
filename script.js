@@ -71,7 +71,8 @@ function chkbutton(idx){//check the user input is correct or not
             setTimeout(levelUp, 1000);
         }
     }else{
-        h2.innerHTML = `Game Over! Your Score Was <b>${level}</b> <br>Press any key to START`;//display SCORE
+        highScore = HighScr(level);
+        h2.innerHTML = `Game Over! Your Score Was <b>${level}</b><br><b>High Score: ${highScore}</b> <br>Press any key to START`;//display SCORE
         document.querySelector("body").style.backgroundColor = "red";//display red screen after game over
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white";//cahnge it to normal again after
@@ -79,6 +80,13 @@ function chkbutton(idx){//check the user input is correct or not
         audiowrong();
         reset();//to start game again
     }
+}
+
+function HighScr(lvl) {
+    if (lvl > highScore) {
+      highScore = lvl;
+    }
+    return highScore;
 }
 
 
